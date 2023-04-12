@@ -1,20 +1,46 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
+		
+#include <stdlib.h>
+		
 /**
- * main - introduction to malloc and free
+		
+ * create_array - create array of size size and assign char c
+		
+ * @size: size of array
+		
+ * @c: char to assign
+		
+ * Description: creat array of size size and assign char c
+		
+ * Return: pointer to array, NULL if fail
+		
  *
- * Return: 0.
+		
  */
+		
 char *create_array(unsigned int size, char c)
+		
 {
-	unsigned int i ;
-	i=0;
-	if (size <= 0)
-	{
-		return NULL ;
-	} 
+		
+	char *str;
+		
+	unsigned int i;
+		
 
+		
+	str = malloc(sizeof(char) * size);
+		
+	if (size == 0 || str == NULL)
+		
+		return (NULL);
+		
 
-    return (0);
+		
+	for (i = 0; i < size; i++)
+		
+		str[i] = c;
+		
+	return (str);
+		
 }
+
