@@ -1,20 +1,17 @@
-#include "main.h"
-/**
- * _strlen_recursion - Returns the length of a string.
- * @s: The string to be measured.
- *
- * Return: The length of the string.
- */
+#include <stdio.h>
+#include <unistd.h>
+#include <string.h>
+#include <ctype.h>
+int chars (char c)
+{
+if (tolower(c) >= 'A' || tolower(c) <= 'z')
+return 1;
+else
+return 0 ;
+}
 int _strlen_recursion(char *s)
 {
-	int longit = 0;
-
-	if (*s)
-	{
-		longit++;
-		longit += _strlen_recursion(s + 1);
-	}
-
-	return (longit);
+if (strlen(s) == 0)
+return 0;
+return chars(s[0]) + _strlen_recursion(s+1);
 }
-
