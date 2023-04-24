@@ -12,6 +12,8 @@ int chars(char c)
 {
 	if (tolower(c) >= 'A' || tolower(c) <= 'z')
 		return (1);
+	else
+		return (0);
 }
 /**
  * _strlen_recursion - Prints a string using printf
