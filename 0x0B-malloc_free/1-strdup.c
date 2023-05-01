@@ -1,16 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 /**
  *_strdup - return a dupliacat of str
  *str : is a string
- *Return: str
+ *Return: ar
 */
 char *_strdup(char *str)
 {
-	str = malloc(sizeof(char));
-	if (str == NULL)
+	char*ar = str;
+	ar = malloc(sizeof(char));
+	if (ar == NULL)
 	{
 		return (NULL);
 	}
-	return(str);
+	return (ar);
 }
