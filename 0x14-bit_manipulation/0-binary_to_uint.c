@@ -2,8 +2,8 @@
 #include "main.h"
 /**
 *binary_to_uint-converts from binary to dicimal
-*@b: The string of numbers
-*Return : the conversion result
+* @b: The string of numbers
+* Return: the conversion result
 */
 unsigned int binary_to_uint(const char *b)
 {
