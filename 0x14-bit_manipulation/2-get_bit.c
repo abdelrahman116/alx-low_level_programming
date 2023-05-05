@@ -1,7 +1,6 @@
 /**
 *get_bit - return a specific bit
 *
-*@bits : the specific bit
 *@index : the index
 *@n : the number
 * Return: the bit
