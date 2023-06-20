@@ -1,10 +1,10 @@
-#include <stdio.h>
 #define DOG_H
-#ifdef DOG_H
+#ifndef DOG_H
+#include <stdio.h>
 struct dog
 {
-char * name;
-float age ;
-char * owner;
+char *name;
+float age;
+char *owner;
 };
 #endif
