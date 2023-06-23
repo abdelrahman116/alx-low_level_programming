@@ -1,6 +1,7 @@
+#include "variadic_functions.h"
 void print_all(const char * const format, ...)
 {
-        unsigned int i;
+       int i;
 
         va_list args;
 
@@ -8,26 +9,20 @@ void print_all(const char * const format, ...)
         va_start(args, n);
 for (i = 0; i < n; i++)
 {
-    if (format == "i")
+    if (format[i] == 'i')
     {
     int x = va_arg(args, int);
-    printf("%d,", x);
+    printf("%d", x);
     }
-    while(format == "f")
-    {
-    double x = va_arg(args, double);
-    printf("%f,", x);
-    }
-    while(format == "s")
-{
-        char *x = va_arg(args, char*);
 
-        if (x == NULL)
-        printf(NULL);
-        else
+ if(format[i] == 's')
+{
+        char *x = va_arg(args, char *);
+
+    
         printf("%s,", x);
 }
-if (format == "c")
+if (format[i] == 'c')
     {
     char x = va_arg(args, char);
     printf("%c,", x);
